@@ -1,0 +1,7 @@
+resources:
+
+transformers:
+sas-authorization/resource-limits.yaml
+sas-files/resource-limits.yaml
+sas-job-execution/resource-limits.yaml
+sas-logon-app/resource-limits.yaml
