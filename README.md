@@ -1,92 +1,56 @@
 # sas-viya-tuning
 
+The sas-viya-tuning repo contains a set of tuning parameters designed to improve overall performance for large scale Viya deployments.  
+
+This project is broken down into the following components:
+* site-default tuning - configuration properties to apply to Viya services during initial start-up
+* kustomization files - transformers to apply to various Kubernetes Deployment and StatefulSet resources
+
+It is important to note that the settings contained within this project are not a one-size-fits-all model.  This project is designed to capture configuration changes for many of the 
+core / most-active pods in a Viya deployment.  Changes to these parameters, or additional parameters required for other pods in the system, may need to be 
+applied depending on the workload of the Viya deployment.
 
 
 ## Getting started
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### For new Viya deployments
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+1. Clone the project:
 
-## Add your files
+   `git clone https://gitlab.sas.com/erbour/sas-viya-tuning.git`
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+2. Copy the contents of this project to the deployment directory used to install/configure Viya
 
-```
-cd existing_repo
-git remote add origin https://gitlab.sas.com/erbour/sas-viya-tuning.git
-git branch -M main
-git push -uf origin main
-```
+   :bulb: **Tip:** If a sitedefault file is already being used, make sure it exists within a different path, or rename it to ensure the contents are not overwritten.  After renaming it, you will need to merge in the contents of the existing file with the contents of the `sas-viya-tuning/sitedefault/sitedefault.yaml` file.
 
-## Integrate with your tools
+   `cp -r sas-viya-tuning/sitedefault {deploy-dir}`
 
-- [ ] [Set up project integrations](https://gitlab.sas.com/erbour/sas-viya-tuning/-/settings/integrations)
+   `cp -r sas-viya-tuning/site-config {deploy-dir}`
 
-## Collaborate with your team
+3. Apply the sitedefault file as per the Common Customizations step
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+4. Add the following entry to the `transformers` block of your deployment's `kustomization.yaml` prior to installing Viya per these instructions
+in [Deploying the Software](https://documentation.sas.com/?cdcId=sasadmincdc&cdcVersion=default&docsetId=dplyml0phy0dkr&docsetTarget=titlepage.htm) in the SAS Viya Platform Operations Guide.
 
-## Test and Deploy
+   `- site-config/tuning`
 
-Use the built-in continuous integration in GitLab.
+### For existing Viya deployments
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+1. Clone the project:
 
-***
+   `git clone https://gitlab.sas.com/erbour/sas-viya-tuning.git`
 
-# Editing this README
+2. Copy the contents of this project to the deployment directory used to install/configure Viya
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+   :bulb: **Tip:** If a sitedefault file is already being used, make sure it exists within a different path, or rename it to ensure the contents are not overwritten.  After renaming it, you will need to merge in the contents of the existing file with the contents of the `sas-viya-tuning/sitedefault/sitedefault.yaml` file.
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+   `cp -r sas-viya-tuning/sitedefault {deploy-dir}`
 
-## Name
-Choose a self-explaining name for your project.
+   `cp -r sas-viya-tuning/site-config {deploy-dir}`
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+3. Add the following entry to the `transformers` block of your deployment's `kustomization.yaml` file and then follow the instructions in [Updating Software](https://documentation.sas.com/?cdcId=sasadmincdc&cdcVersion=default&docsetId=k8sag&docsetTarget=titlepage.htm) in the SAS Viya Platform Operations Guide to apply the changes.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+   `- site-config/tuning`
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+4. Apply sitedefault file - TBD 
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
