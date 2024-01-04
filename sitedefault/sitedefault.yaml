@@ -11,6 +11,7 @@ config/authorization/jvm/java_option_xmx: -Xmx2048m
 config/files/jvm/java_option_xmx: -Xmx1024m
 config/identities/jvm/java_option_xmx: -Xmx512m
 config/jobExecution/jvm/java_option_xmx: -Xmx1024m
+config/launcher/jvm/java_option_xmx: -Xmx1024m
 config/SASLogon/jvm/java_option_xmx: -Xmx2048m
 config/SASLogon/jvm/java_option_xms: -Xmx2048m
 
