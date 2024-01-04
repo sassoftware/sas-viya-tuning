@@ -9,6 +9,8 @@ resources:
   - sas-launcher/launcher-super-user-process-limit.yaml
   - sas-launcher/launcher-user-process-limit.yaml
 
+  - sas-crunchy/postgres-cluster-resource-limits.yaml
+
 transformers:
   # Platform resource limits tuning
   - sas-authorization/resource-limits.yaml
@@ -19,3 +21,5 @@ transformers:
   # Compute/Launcher tuning
   - sas-launcher/launcher-super-user-process-limit.yaml
   - sas-launcher/launcher-user-process-limit.yaml
+
+  - sas-crunchy/postgres-cluster-resource-limits.yaml
