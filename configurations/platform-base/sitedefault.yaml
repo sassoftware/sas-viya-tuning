@@ -1,0 +1,13 @@
+
+# LDAP Connection Pooling
+config/identities/sas.identities.providers.ldap.connection/pool.maxActive: 30
+config/identities/sas.identities.providers.ldap.connection/pool.maxIdle: 30
+
+# JDBC Connection Pooling
+config/application/sas.deployment.springdatasource.defaults: large
+
+# JVM Tuning
+config/authorization/jvm/java_option_xmx: -Xmx2048m
+config/identities/jvm/java_option_xmx: -Xmx512m
+config/SASLogon/jvm/java_option_xmx: -Xmx2048m
+config/SASLogon/jvm/java_option_xms: -Xmx2048m

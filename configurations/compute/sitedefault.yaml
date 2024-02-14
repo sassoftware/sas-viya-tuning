@@ -1,0 +1,15 @@
+
+# JVM Tuning
+config/jobExecution/jvm/java_option_xmx: -Xmx1024m
+config/launcher/jvm/java_option_xmx: -Xmx1024m
+config/scheduler/jvm/java_option_xmx: -Xmx512m
+
+# Launcher Memory and CPU Tuning
+config/launcher/sas.launcher.default/cpu.limit: 8
+config/launcher/sas.launcher.default/cpu.request: 2
+config/launcher/sas.launcher.default/memory.limit: 8Gi
+config/launcher/sas.launcher.default/memory.request: 2Gi
+config/launcher/sas.launcher.max/cpu.limit: 8
+config/launcher/sas.launcher.max/cpu.request: 2
+config/launcher/sas.launcher.max/memory.limit: 8Gi
+config/launcher/sas.launcher.max/memory.request: 2Gi

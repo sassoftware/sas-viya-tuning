@@ -1,0 +1,123 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: node-kubelet-updater-script
+  namespace: default
+data:
+  kubeletUpdate.sh: |
+      #!/bin/bash      
+      restartRequired="0" 
+
+      kubeApiQps=200
+      # {{ KUBE-API-BURST }}
+      # {{ SYSCTL-LIST }}
+      # {{ CONTAINER-LOG-SIZE }}
+       
+      if [[ -n "$kubeApiQps" && -z "$(ps -ef | grep kubelet | grep -iE 'kube-api-qps')" ]]
+      then
+        echo "Updating kubelet flags: kube-api-qps=$kubeApiQps"
+        sed -i "s/^KUBELET_FLAGS.*/& --kube-api-qps=${kubeApiQps} /" /etc/default/kubelet
+        restartRequired="1"
+      fi
+  
+      if [[ -n "$kubeApiBurst" && -z "$(ps -ef | grep kubelet | grep -iE 'kube-api-burst')" ]]
+      then
+        echo "Updating kubelet flags: kube-api-burst=$kubeApiBurst"
+        sed -i "s/^KUBELET_FLAGS.*/& --kube-api-burst=${kubeApiBurst} /" /etc/default/kubelet
+        restartRequired="1"
+      fi
+
+      if [[ -n "$sysctlList" && -z "$(ps -ef | grep kubelet | grep -iE 'allowed-unsafe-sysctls')" ]]
+      then
+        echo "Adding allowed sysctls: allowed-unsafe-sysctls=\"$sysctlList\""
+        sed -i "s/^KUBELET_FLAGS.*/& --allowed-unsafe-sysctls \"$sysctlList\" /" /etc/default/kubelet
+        restartRequired="1"                              
+      fi
+
+      if [[ -n "$containerLogSize" ]]
+      then  
+        echo "Updating kubelet flags: container-log-max-size=$containerLogSize"      
+        if [[ -n "$(ps -ef | grep kubelet | grep -iE 'container-log-max-size')" ]]
+        then
+           sed -i -e "s/container-log-max-size=[^=&]*\s/container-log-max-size=${containerLogSize} /" /etc/default/kubelet
+        else
+           sed -i "s/^KUBELET_FLAGS.*/& --container-log-max-size=${containerLogSize} /" /etc/default/kubelet
+        fi
+       
+        echo "Updating kubelet log location and creating link"
+        mkdir -p /mnt/var/log/pods
+        rm -rf /var/log/pods
+        echo "/mnt/var/log/pods linked as /var/log/pods"
+        ln -s /mnt/var/log/pods /var/log/pods  
+        restartRequired="1"                              
+      fi
+      
+      if [[ "$restartRequired" == "1" ]]
+      then
+        echo "Restarting kubelet"
+        systemctl restart kubelet
+        echo "Restart complete"
+        restartRequired="0"
+      fi
+      echo "Kubelet changes completed."
+      
+      exit 0
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  namespace: default
+  name: node-kubelet-updater
+  labels:
+    app: node-kubelet-updater
+spec:
+  selector:
+    matchLabels:
+      name: node-kubelet-updater
+  template:
+    metadata:
+      labels:
+        name: node-kubelet-updater
+    spec:
+      tolerations:
+      - operator: Exists
+        effect: NoSchedule
+      hostPID: true
+      automountServiceAccountToken: false
+      imagePullSecrets: []
+      priorityClassName: system-node-critical
+      volumes:
+      - name: configmap-vol
+        configMap:
+          name: node-kubelet-updater-script
+      - name: node-local-script-dir
+        hostPath:
+          path: /mnt
+      containers:
+      - image: "gcr.io/google-containers/pause:2.0"
+        name: pause
+      initContainers:
+      - name: node-kubelet-updater
+        image: ubuntu:22.04
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - name: configmap-vol
+          mountPath: /configmap-vol-mount
+        - name: node-local-script-dir
+          mountPath: /node-local-script-dir
+
+        command:
+          - /bin/bash
+          - -c
+          - |
+            set -e
+            set -x
+             
+            cp /configmap-vol-mount/kubeletUpdate.sh /node-local-script-dir/
+            
+            # On node: make script executable & run it
+            /usr/bin/nsenter -m/proc/1/ns/mnt -- chmod u+x /mnt/kubeletUpdate.sh
+            /usr/bin/nsenter -m/proc/1/ns/mnt /mnt/kubeletUpdate.sh
+---
