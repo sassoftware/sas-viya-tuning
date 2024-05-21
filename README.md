@@ -27,15 +27,15 @@ different scenario.  In these situations, it is important to remember when apply
 ### Platform Scenarios
 | Scenario         | Description                                 |
 |------------------|---------------------------------------------|
-| [platform-common](./platform-common/README.md) | Recommended tunings that apply to core services contained within the SAS Viya Platform.
-| [platform-crunchy-postgres](./platform-crunchy-postgres/README.md) | Recommended tunings that apply to the Crunchy Postgres instance (only applicable when Viya is deployed with an internal Postgres instance)
+| [platform-common](./configurations/platform-common/README.md) | Recommended tunings that apply to core services contained within the SAS Viya Platform.
+| [platform-crunchy-postgres](./configurations/platform-crunchy-postgres/README.md) | Recommended tunings that apply to the Crunchy Postgres instance (only applicable when Viya is deployed with an internal Postgres instance)
 
 ### SAS Application Scenarios
 | Scenario         | Description                                 |
 | -----------------|---------------------------------------------|
-| [sas-compute](./sas-compute/README.md) | Tunings specific to the SAS Compute / SAS Launcher services, when a high number of concurrent Compute sessions are required
-| [sas-studio](./sas-studio/README.md) | Tunings specific to SAS Studio, when a high volume of users are accessing the web application, scheduling jobs, etc.
-| [sas-visual-analytics](./sas-visual-analytics/README.md) | Tunings specific to SAS Visual Analytics, when a high volume of users are accessing the web application, viewing and/or editing reports, etc.
+| [sas-compute](./configurations/sas-compute/README.md) | Tunings specific to the SAS Compute / SAS Launcher services, when a high number of concurrent Compute sessions are required
+| [sas-studio](./configurations/sas-studio/README.md) | Tunings specific to SAS Studio, when a high volume of users are accessing the web application, scheduling jobs, etc.
+| [sas-visual-analytics](./configurations/sas-visual-analytics/README.md) | Tunings specific to SAS Visual Analytics, when a high volume of users are accessing the web application, viewing and/or editing reports, etc.
 
 
 
