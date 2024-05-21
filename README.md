@@ -9,7 +9,7 @@ scheduled batch jobs, mobile applications, etc.
 Which scenarios are applicable will depend on the specific Viya environment and which applications are used.  
 Not all scenarios in this project necessarily need to be included, and administrators can pick and choose which ones pertain to their environment.
 
-In most cases, the tuning parameters for a given scenario can be broken down into the following components:
+In most cases, the tuning parameters for a given scenario can be broken down into the following categories:
 * site-default tuning - configuration properties to apply to Viya services during initial start-up
 * kustomization files - Kustomize transformers to apply to various Kubernetes Deployment and StatefulSet resources
 

@@ -10,3 +10,11 @@ set of parameters includes:
   * sas-arke
   * sas-authorization
   * sas-logon-app
+
+## Usage Notes
+
+Add the following line to the `resources` section of the main sas-viya-tuning [kustomization.yaml](../kustomization.yaml) file:
+
+    ```bash
+      - platform-common
+    ```
