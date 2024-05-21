@@ -1,9 +1,11 @@
 resources:
   # Platform resource limits tuning
+  - sas-arke/resource-limits.yaml
   - sas-authorization/resource-limits.yaml
   - sas-logon-app/resource-limits.yaml
 
 transformers:
   # Platform resource limits tuning
+  - sas-arke/resource-limits.yaml
   - sas-authorization/resource-limits.yaml
   - sas-logon-app/resource-limits.yaml

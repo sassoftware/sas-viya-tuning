@@ -1,0 +1,28 @@
+---
+apiVersion: builtin
+kind: PatchTransformer
+metadata:
+  name: sas-workload-orchestrator-resource-limits-tuning
+patch: |-
+  - op: replace
+    path: /spec/template/spec/containers/0/resources/limits/cpu
+    value: 4000m
+target:
+  group: apps
+  kind: StatefulSet
+  name: sas-workload-orchestrator
+  version: v1
+---
+apiVersion: builtin
+kind: PatchTransformer
+metadata:
+  name: sas-workload-orchestrator-ds-resource-limits-tuning
+patch: |-
+  - op: replace
+    path: /spec/template/spec/containers/0/resources/limits/cpu
+    value: 1000m
+target:
+  group: apps
+  kind: DaemonSet
+  name: sas-workload-orchestrator
+  version: v1

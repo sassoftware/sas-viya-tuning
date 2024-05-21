@@ -1,0 +1,17 @@
+resources:
+  # Platform resource limits tuning - required for high concurrency with scheduled jobs
+  - sas-job-execution/resource-limits.yaml
+  - sas-scheduler/resource-limits.yaml
+
+  # Studio tuning
+  - sas-studio/resource-limits.yaml
+  - sas-studio-app/resource-limits.yaml
+
+transformers:
+  # Platform resource limits tuning - required for high concurrency with scheduled jobs
+  - sas-job-execution/resource-limits.yaml
+  - sas-scheduler/resource-limits.yaml
+
+  # Studio tuning
+  - sas-studio/resource-limits.yaml
+  - sas-studio-app/resource-limits.yaml

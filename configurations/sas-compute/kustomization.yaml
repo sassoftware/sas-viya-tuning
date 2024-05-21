@@ -1,17 +1,15 @@
 resources:
-  # Platform resource limits tuning
-  - sas-job-execution/resource-limits.yaml
-
   # Compute/Launcher tuning
+  - sas-compute/resource-limits.yaml
+  - sas-launcher/resource-limits.yaml
   - sas-launcher/launcher-super-user-process-limit.yaml
   - sas-launcher/launcher-user-process-limit.yaml
 
   - kube-proxy/node-kubelet-updater.yaml
 
 transformers:
-  # Platform resource limits tuning
-  - sas-job-execution/resource-limits.yaml
-
   # Compute/Launcher tuning
+  - sas-compute/resource-limits.yaml
+  - sas-launcher/resource-limits.yaml
   - sas-launcher/launcher-super-user-process-limit.yaml
   - sas-launcher/launcher-user-process-limit.yaml

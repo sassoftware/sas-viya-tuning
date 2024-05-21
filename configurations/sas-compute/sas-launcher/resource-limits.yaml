@@ -2,7 +2,7 @@
 apiVersion: builtin
 kind: PatchTransformer
 metadata:
-  name: sas-authorization-resource-limits-tuning
+  name: sas-launcher-resource-limits-tuning
 patch: |-
   - op: replace
     path: /spec/template/spec/containers/0/resources/limits/cpu
@@ -13,5 +13,5 @@ patch: |-
 target:
   group: apps
   kind: Deployment
-  name: sas-authorization
+  name: sas-launcher
   version: v1
