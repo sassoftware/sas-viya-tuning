@@ -1,3 +1,7 @@
+> [!WARNING]
+> *7/5/24 Update:* This project is a work-in-progress.  Please do not copy the contents in its current form to a Viya deployment without reaching out.  An update will be posted soon when the structure becomes finalized.
+
+
 # sas-viya-tuning
 
 The sas-viya-tuning repo contains a set of tuning parameters designed to improve overall performance for large scale Viya deployments.  
