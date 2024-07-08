@@ -1,5 +1,5 @@
 > :warning:
-> *7/5/24 Update:* This project is a work-in-progress.  Please do not copy the contents in its current form to a Viya deployment without reaching out.  An update will be posted soon when the structure becomes finalized.
+> **_7/5/24 Update:_ This project is a work-in-progress.  Please do not copy the contents in its current form to a Viya deployment without reaching out.  An update will be posted soon when the structure becomes finalized.**
 
 
 # sas-viya-tuning
