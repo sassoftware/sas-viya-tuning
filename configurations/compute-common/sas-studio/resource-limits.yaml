@@ -2,16 +2,16 @@
 apiVersion: builtin
 kind: PatchTransformer
 metadata:
-  name: sas-studio-app-resource-limits-tuning
+  name: sas-studio-resource-limits-tuning
 patch: |-
   - op: replace
     path: /spec/template/spec/containers/0/resources/limits/cpu
     value: 2000m
   - op: replace
     path: /spec/template/spec/containers/0/resources/limits/memory
-    value: 1500Mi
+    value: 2Gi
 target:
   group: apps
   kind: Deployment
-  name: sas-studio-app
+  name: sas-studio
   version: v1

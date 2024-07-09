@@ -5,6 +5,10 @@ resources:
   - sas-launcher/launcher-super-user-process-limit.yaml
   - sas-launcher/launcher-user-process-limit.yaml
 
+  # SAS Studio tuning
+  - sas-studio/resource-limits.yaml
+  - sas-studio-app/resource-limits.yaml
+
   - kube-proxy/node-kubelet-updater.yaml
 
 transformers:
@@ -13,3 +17,7 @@ transformers:
   - sas-launcher/resource-limits.yaml
   - sas-launcher/launcher-super-user-process-limit.yaml
   - sas-launcher/launcher-user-process-limit.yaml
+
+  # SAS Studio tuning
+  - sas-studio/resource-limits.yaml
+  - sas-studio-app/resource-limits.yaml

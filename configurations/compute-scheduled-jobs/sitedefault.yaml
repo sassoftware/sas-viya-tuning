@@ -1,4 +1,4 @@
 
 # JVM Tuning
-config/jobExecution/jvm/java_option_xmx: -Xmx1024m
-config/scheduler/jvm/java_option_xmx: -Xmx1024m
+config/jobExecution/jvm/java_option_xmx: -XX:MaxRAMPercentage=75
+config/scheduler/jvm/java_option_xmx: -XX:MaxRAMPercentage=75

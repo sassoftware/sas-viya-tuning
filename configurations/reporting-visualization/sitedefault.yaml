@@ -1,4 +1,4 @@
 
 # JVM Tuning
-config/files/jvm/java_option_xmx: -Xmx1536m
-config/reportExecution/jvm/java_option_xmx: -Xmx4096m
+config/files/jvm/java_option_xmx: -XX:MaxRAMPercentage=75
+config/reportExecution/jvm/java_option_xmx: -XX:MaxRAMPercentage=75

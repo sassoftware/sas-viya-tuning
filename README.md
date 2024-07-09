@@ -31,8 +31,9 @@ different scenario.  In these situations, it is important to remember when apply
 | [platform-crunchy-postgres](./configurations/platform-crunchy-postgres/README.md) | Recommended tunings that apply to the Crunchy Postgres instance (only applicable when Viya is deployed with an internal Postgres instance)
 
 ### SAS Application Scenarios
-| Scenario         | Description                                 |
-| -----------------|---------------------------------------------|
+| Scenario                  | Description                                 |
+| --------------------------|---------------------------------------------|
+| [analytics-model-building](./configurations/analytics-model-building/README.md) | Tunings specific to SAS Model Studio and building analytical models.
 | [compute-common](./configurations/compute-common/README.md) | Tunings specific to the SAS Compute / SAS Launcher services, when a high number of concurrent Compute sessions are required
 | [compute-scheduled-jobs](./configurations/compute-scheduled-jobs/README.md) | Tunings specific situations where there is a high number of scheduled jobs.
 | [reporting-visualization](./configurations/reporting-visualization/README.md) | Tunings specific to SAS Visual Analytics, when a high volume of users are accessing the web application, viewing and/or editing reports, etc.

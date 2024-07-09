@@ -1,6 +1,7 @@
 
 # JVM Tuning
-config/launcher/jvm/java_option_xmx: -Xmx1024m
+config/launcher/jvm/java_option_xmx: -XX:MaxRAMPercentage=75
+config/SASStudio/jvm/java_option_xmx: -XX:MaxRAMPercentage=75
 
 # Launcher Memory and CPU Tuning
 config/launcher/sas.launcher.default/cpu.limit: 8
