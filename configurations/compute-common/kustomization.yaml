@@ -9,7 +9,7 @@ resources:
   - sas-studio/resource-limits.yaml
   - sas-studio-app/resource-limits.yaml
 
-  - kube-proxy/node-kubelet-updater.yaml
+  # - kube-proxy/node-kubelet-updater.yaml
 
 transformers:
   # Compute/Launcher tuning
