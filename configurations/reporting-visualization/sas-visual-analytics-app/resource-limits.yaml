@@ -10,5 +10,5 @@ patch: |-
 target:
   group: apps
   kind: Deployment
-  name: sas-rvisual-analytics-app
+  name: sas-visual-analytics-app
   version: v1
