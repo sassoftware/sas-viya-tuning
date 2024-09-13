@@ -9,7 +9,7 @@ This scenario covers additional tuning parameters required when a large number o
 
 Add the following line to the `resources` section of the main sas-viya-tuning [kustomization.yaml](../kustomization.yaml) file:
 
-    ```bash
+
     resources:
       - compute-scheduled-jobs
-    ```
+

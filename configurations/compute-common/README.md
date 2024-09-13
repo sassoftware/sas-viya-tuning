@@ -12,7 +12,5 @@ This scenario covers many of the common tuning parameters applicable to deployme
 
 Add the following line to the `resources` section of the main sas-viya-tuning [kustomization.yaml](../kustomization.yaml) file:
 
-    ```bash
     resources:
       - compute-common
-    ```

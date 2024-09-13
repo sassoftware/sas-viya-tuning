@@ -1,7 +1,4 @@
 resources:
-  # Platform services resource limits tuning
-  - sas-files/resource-limits.yaml
-
   # Report Services resource limits tuning
   - sas-report-execution/resource-limits.yaml
 
@@ -9,9 +6,6 @@ resources:
   - sas-visual-analytics-app/resource-limits.yaml
 
 transformers:
-  # Platform services resource limits tuning
-  - sas-files/resource-limits.yaml
-
   # Report Services resource limits tuning
   - sas-report-execution/resource-limits.yaml
 
