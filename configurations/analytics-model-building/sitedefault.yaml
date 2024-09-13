@@ -1,0 +1,2 @@
+# Analytics
+config/application/sas.analytics.execution/maximum.concurrent.node.execution: 50

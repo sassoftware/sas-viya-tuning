@@ -1,0 +1,3 @@
+
+# JVM Tuning
+config/scheduler/jvm/java_option_xmx: -XX:MaxRAMPercentage=75

@@ -8,13 +8,13 @@
 apiVersion: builtin
 kind: PatchTransformer
 metadata:
-  name: sas-launcher-processes-per-super-user-limitation
+  name: sas-launcher-user-process-limit
 patch: |-
   - op: replace
-    path: /spec/template/spec/containers/0/env/3
+    path: /spec/template/spec/containers/0/env/1
     value:
-      name: SAS_LAUNCHER_SUPER_USER_PROCESS_LIMIT
-      value: "100"
+      name: SAS_LAUNCHER_USER_PROCESS_LIMIT
+      value: "50"
 target:
   version: v1
   group: apps
