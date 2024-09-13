@@ -1,6 +1,3 @@
-> :warning:
-> **_7/5/24 Update:_ This project is a work-in-progress.  Please do not copy the contents in its current form to a Viya deployment without reaching out.  An update will be posted soon when the structure becomes finalized.**
-
 
 # sas-viya-tuning
 
@@ -51,12 +48,6 @@ Follow these steps for integrating the tuning parameters into a new or existing 
 1. Clone the project:
 
    `git clone https://gitlab.sas.com/erbour/sas-viya-tuning.git`
-
-   The following steps are necessary following the `clone` command to point to the right branch:
-
-   `git fetch origin`
-
-   `git checkout scenarios`
 
 2. Copy the contents of this project to the `site-config` location within the deployment directory used to install/configure Viya
 
