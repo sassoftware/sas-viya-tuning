@@ -1,5 +1,6 @@
 
 # JVM Tuning
+config/jobExecution/jvm/java_option_xmx: -XX:MaxRAMPercentage=75
 config/launcher/jvm/java_option_xmx: -XX:MaxRAMPercentage=75
 config/SASStudio/jvm/java_option_xmx: -XX:MaxRAMPercentage=75
 

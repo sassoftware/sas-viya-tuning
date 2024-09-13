@@ -5,6 +5,9 @@ resources:
   - sas-launcher/launcher-super-user-process-limit.yaml
   - sas-launcher/launcher-user-process-limit.yaml
 
+  # Job Execution tuning
+  - sas-job-execution/resource-limits.yaml
+
   # SAS Studio tuning
   - sas-studio/resource-limits.yaml
   - sas-studio-app/resource-limits.yaml
@@ -17,6 +20,9 @@ transformers:
   - sas-launcher/resource-limits.yaml
   - sas-launcher/launcher-super-user-process-limit.yaml
   - sas-launcher/launcher-user-process-limit.yaml
+
+  # Job Execution tuning
+  - sas-job-execution/resource-limits.yaml
 
   # SAS Studio tuning
   - sas-studio/resource-limits.yaml

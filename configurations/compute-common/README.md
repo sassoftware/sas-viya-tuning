@@ -4,6 +4,7 @@ This scenario covers many of the common tuning parameters applicable to deployme
 
 * Memory and CPU Limit Tuning - increase the memory and CPU limits of certain platform pods, including:
   * sas-compute
+  * sas-job-execution
   * sas-launcher
   * sas-workload-orchestrator
 
@@ -12,5 +13,6 @@ This scenario covers many of the common tuning parameters applicable to deployme
 Add the following line to the `resources` section of the main sas-viya-tuning [kustomization.yaml](../kustomization.yaml) file:
 
     ```bash
+    resources:
       - compute-common
     ```
