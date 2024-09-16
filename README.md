@@ -40,14 +40,38 @@ different scenario.  In these situations, it is important to remember when apply
 | [reporting-visualization](./configurations/reporting-visualization/README.md) | Tunings specific to SAS Visual Analytics, when a high volume of users are accessing the web application, viewing and/or editing reports, etc.
 
 
+## Project Release Information
+
+As new versions of Viya become available, there is the potential for architectural changes being made within the underlying platform.  For example, pods may be added or removed within a deployment, pods may be renamed, etc.  Changes of this nature of course have an impact on any corresponding kustomization patches.  To accomodate these types of changes, each release of this project will be tagged with the Viya cadence(s) it is compatible with.  When a new cadence becomes
+available, the tunings in this project are first verified against that release.  If changes to the kustomization patches are required, a new release will be published and then tagged appropriately.
+
+**Important:** whenever the tunings in this project are applied to a Viya deployment, you must make sure you are using the appropriate version.  Follow the instructions in the Getting Started section below to ensure you are referencing the proper version.
+
+### Compatibility Guide
+
+| Version          | Compatible Viya Release(s)                 |
+| -----------------|--------------------------------------------|
+| 1.1.0            | 2024.03 - 2024.07                          |
+
 
 ## Getting Started
 
 Follow these steps for integrating the tuning parameters into a new or existing Viya deployment.
 
-1. Clone the project:
+1. Clone the project using the appropriate Viya release:
 
-   `git clone https://gitlab.sas.com/erbour/sas-viya-tuning.git`
+   `git clone --branch <viya-release> https://gitlab.sas.com/erbour/sas-viya-tuning.git`
+
+   For example:
+
+   `git clone --branch 2024.07 https://gitlab.sas.com/erbour/sas-viya-tuning.git`
+
+   If you have previously cloned this project from a previous release, you can switch to a newer release using the following commands:
+
+   `git fetch origin`
+
+   `git checkout tags/<viya-release>`
+
 
 2. Copy the contents of this project to the `site-config` location within the deployment directory used to install/configure Viya
 
