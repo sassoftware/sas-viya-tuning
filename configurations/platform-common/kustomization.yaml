@@ -3,7 +3,7 @@ resources:
   - sas-arke/resource-limits.yaml
   - sas-authorization/resource-limits.yaml
   - sas-files/resource-limits.yaml
-  - sas-folders/resource-limits.yaml
+  - sas-file-store/resource-limits.yaml
   - sas-logon-app/resource-limits.yaml
 
 transformers:
@@ -11,5 +11,5 @@ transformers:
   - sas-arke/resource-limits.yaml
   - sas-authorization/resource-limits.yaml
   - sas-files/resource-limits.yaml
-  - sas-folders/resource-limits.yaml
+  - sas-file-store/resource-limits.yaml
   - sas-logon-app/resource-limits.yaml

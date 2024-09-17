@@ -10,7 +10,7 @@ set of parameters includes:
   * sas-arke
   * sas-authorization
   * sas-files
-  * sas-folders
+  * sas-file-store
   * sas-logon-app
 
 ## Usage Notes
