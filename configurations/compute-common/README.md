@@ -14,3 +14,14 @@ Add the following line to the `resources` section of the main sas-viya-tuning [k
 
     resources:
       - compute-common
+
+## Tuning Summary
+
+| Pod Name                  | CPU Limits     | Memory Limits  | Java Heap              | Other                        |
+|---------------------------|----------------|----------------|------------------------|------------------------------|
+| sas-compute               | 4000m          | 2Gi            |                        |                              |
+| sas-job-execution         | 2000m          | 1500Mi         | MaxRAMPercentage (75%) |                              |
+| sas-launcher              | 2000m          | 2Gi            | MaxRAMPercentage (75%) |                              |
+| sas-studio                | 2000m          | 2Gi            |                        |                              |  
+| sas-studio-app            | 4000m          | 4Gi            | MaxRAMPercentage (75%) |                              |
+| sas-workload-orchestrator | 4000m          |                |                        |                              |  

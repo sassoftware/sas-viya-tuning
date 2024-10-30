@@ -12,3 +12,10 @@ Add the following line to the `resources` section of the main sas-viya-tuning [k
 
     resources:
       - reporting-visualization
+
+## Tuning Summary
+
+| Pod Name                  | CPU Limits     | Memory Limits  | Java Heap              | Other                        |
+|---------------------------|----------------|----------------|------------------------|------------------------------|
+| sas-report-execution      |                | 6Gi            | MaxRAMPercentage (75%) |                              |  
+| sas-visual-analytics-app  | 1500m          |                |                        |                              |  

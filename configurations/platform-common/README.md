@@ -19,3 +19,15 @@ Add the following line to the `resources` section of the main sas-viya-tuning [k
 
     resources:
       - platform-common
+
+## Tuning Summary
+
+| Pod Name           | CPU Limits     | Memory Limits  | Java Heap              | Other                        |
+|--------------------|----------------|----------------|------------------------|------------------------------|
+| All Services       |                |                |                        | JDBC Connection Pool (large) |
+| sas-arke           | 1000m          | 1Gi            |                        |                              |
+| sas-authorization  | 6000m          | 3Gi            | MaxRAMPercentage (75%) |                              |  
+| sas-file-store     | 3000m          | 2Gi            |                        |                              |
+| sas-files          | 2000m          | 3Gi            | MaxRAMPercentage (75%) |                              |
+| sas-identities     |                |                | MaxRAMPercentage (75%) | LDAP Connection Pool (30)    |
+| sas-logon-app      | 2000m          | 2Gi            | MaxRAMPercentage (75%) |                              |
