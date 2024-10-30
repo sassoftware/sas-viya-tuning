@@ -61,11 +61,11 @@ Follow these steps for integrating the tuning parameters into a new or existing 
 
 1. Clone the project using the appropriate Viya release:
 
-   `git clone --branch <viya-release> https://gitlab.sas.com/erbour/sas-viya-tuning.git`
+   `git clone --branch <viya-release> https://gitlab.sas.com/aat/sas-viya-tuning.git`
 
    For example:
 
-   `git clone --branch 2024.07 https://gitlab.sas.com/erbour/sas-viya-tuning.git`
+   `git clone --branch 2024.07 https://gitlab.sas.com/aat/sas-viya-tuning.git`
 
    If you have previously cloned this project from a previous release, you can switch to a newer release using the following commands:
 
