@@ -76,7 +76,7 @@ Follow these steps for integrating the tuning parameters into a new or existing 
 
 2. Copy the contents of this project to the `site-config` location within the deployment directory used to install/configure Viya
 
-   `cp sas-viya-tuning {deploy-dir}/site-config`
+   `cp -R sas-viya-tuning {deploy-dir}/site-config`
 
 3. In your deployment's main `kustomization.yaml` file, add the following line within the `transformers` section to include the appropriate tuning resources:
 
