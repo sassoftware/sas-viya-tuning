@@ -11,7 +11,7 @@ Which scenarios are applicable will depend on the specific Viya environment and 
 Not all scenarios in this project necessarily need to be included, and administrators can pick and choose which ones pertain to their environment.
 
 In most cases, the tuning parameters for a given scenario can be broken down into the following categories:
-* site-default tuning - configuration properties to apply to Viya services during initial start-up
+* configuration properties - tunings that apply to Viya services (such as Java Heap settings, connection pool settings, etc.) that can be set during initial startup or against a running system using SAS Environment Manager
 * kustomization files - Kustomize transformers to apply to various Kubernetes Deployment and StatefulSet resources
 
 For additional details and a description of what each scenario covers, make sure to drill into the respective README files.
@@ -43,7 +43,7 @@ different scenario.  In these situations, it is important to remember when apply
 ## Project Release Information
 
 As new versions of Viya become available, there is the potential for architectural changes being made within the underlying platform.  For example, pods may be added or removed within a deployment, pods may be renamed, etc.  Changes of this nature of course have an impact on any corresponding kustomization patches.  To accomodate these types of changes, each release of this project will be tagged with the Viya cadence(s) it is compatible with.  When a new cadence becomes
-available, the tunings in this project are first verified against that release.  If changes to the kustomization patches are required, a new release will be published and then tagged appropriately.
+available, the tunings in this project are verified against that release.  If changes to the kustomization patches are required, a new release will be published and then tagged appropriately.
 
 **Important:** whenever the tunings in this project are applied to a Viya deployment, you must make sure you are using the appropriate version.  Follow the instructions in the Getting Started section below to ensure you are referencing the proper version.
 
@@ -51,7 +51,7 @@ available, the tunings in this project are first verified against that release. 
 
 | Version          | Compatible Viya Release(s)                 |
 | -----------------|--------------------------------------------|
-| 1.2.0            | 2024.08                                    |
+| 1.2.0            | 2024.08 - 2024.10                          |
 | 1.1.0            | 2024.03 - 2024.07                          |
 
 
