@@ -1,5 +1,10 @@
 
 ## v1.3.0 (2025.01)
+* Introduced new tunings for the following scenarios:
+    * analytics-model-building
+    * analytics-model-management
+    * decisioning
+    * program-execution
 * Updated platform-common configuration:
     * Removed memory limit setting for sas-authorization (default values have changed)
 

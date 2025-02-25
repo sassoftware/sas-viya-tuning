@@ -35,8 +35,11 @@ different scenario.  In these situations, it is important to remember when apply
 | Scenario                  | Description                                 |
 | --------------------------|---------------------------------------------|
 | [analytics-model-building](./configurations/analytics-model-building/README.md) | Tunings specific to SAS Model Studio and building analytical models.
+| [analytics-model-management](./configurations/analytics-model-management/README.md) | Tunings specific to SAS Model Manager and administering and publishing analytical models.
 | [compute-common](./configurations/compute-common/README.md) | Tunings specific to the SAS Compute, SAS Launcher services, and SAS Workload Orchestrator, when a high number of concurrent Compute sessions are required.
 | [compute-scheduled-jobs](./configurations/compute-scheduled-jobs/README.md) | Tunings specific situations where there is a large number of scheduled jobs running within the deployment.
+| [decisioning](./configurations/decisioning/README.md) | Tunings specific to SAS Decision Manager.
+| [program-execution](./configurations/program-execution/README.md) | Tunings specific to the SAS MicroAnalytic Service, when a high volume of programs are executed.
 | [reporting-visualization](./configurations/reporting-visualization/README.md) | Tunings specific to SAS Visual Analytics, when a high volume of users are accessing the web application, viewing and/or editing reports, etc.
 
 
@@ -51,6 +54,7 @@ available, the tunings in this project are verified against that release.  If ch
 
 | Version          | Compatible Viya Release(s)                 |
 | -----------------|--------------------------------------------|
+| 1.3.0            | 2025.01                                    |
 | 1.2.0            | 2024.08 - 2024.12                          |
 | 1.1.0            | 2024.03 - 2024.07                          |
 
