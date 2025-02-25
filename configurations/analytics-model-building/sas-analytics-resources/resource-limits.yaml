@@ -1,0 +1,17 @@
+---
+apiVersion: builtin
+kind: PatchTransformer
+metadata:
+  name: sas-analytics-resources-limits-tuning
+patch: |-
+  - op: replace
+    path: /spec/template/spec/containers/0/resources/limits/cpu
+    value: 3000m
+  - op: replace
+    path: /spec/template/spec/containers/0/resources/limits/memory
+    value: 1Gi
+target:
+  group: apps
+  kind: Deployment
+  name: sas-analytics-resources
+  version: v1

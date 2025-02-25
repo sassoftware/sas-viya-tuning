@@ -1,0 +1,14 @@
+---
+apiVersion: builtin
+kind: PatchTransformer
+metadata:
+  name: sas-analytics-gateway-limits-tuning
+patch: |-
+  - op: replace
+    path: /spec/template/spec/containers/0/resources/limits/memory
+    value: 4Gi
+target:
+  group: apps
+  kind: Deployment
+  name: sas-analytics-gateway
+  version: v1

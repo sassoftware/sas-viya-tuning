@@ -1,2 +1,5 @@
 # Analytics
 config/application/sas.analytics.execution/maximum.concurrent.node.execution: 50
+
+# JVM Tuning
+config/analyticsGateway/jvm/java_option_xmx: -XX:MaxRAMPercentage=75

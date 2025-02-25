@@ -1,0 +1,17 @@
+resources:
+  # Analytics Services tuning
+  - sas-analytics-gateway/resource-limits.yaml
+  - sas-analytics-resources/resource-limits.yaml
+
+  # Data Mining Services tuning
+  - sas-data-mining-project-resources/resource-limits.yaml
+  - sas-data-mining-risk-models/resource-limits.yaml
+
+transformers:
+  # Analytics Services tuning
+  - sas-analytics-gateway/resource-limits.yaml
+  - sas-analytics-resources/resource-limits.yaml
+
+  # Data Mining Services tuning
+  - sas-data-mining-project-resources/resource-limits.yaml
+  - sas-data-mining-risk-models/resource-limits.yaml
