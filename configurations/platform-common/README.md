@@ -1,8 +1,7 @@
 # Tuning Scenario: platform-common
 
 This scenario covers many of the common tuning parameters applicable to nearly all
-Viya environments where there are a large number of users interacting with the system. The 
-set of parameters includes:
+Viya environments where there are a large volume of users interacting with the system at the same time. This can include interactive sessions through any of the Viya web applications, the sas-viya CLIs, or batch jobs running in the background. The set of parameters includes:
 
 * Large Deployment Tuning - increases the size of thread pools used for accessing the SAS Infrastructure Data Server to allow for higher throughput
 * LDAP Connection Pool Tuning - configures the connection pool used by Viya's authentication mechanism to allow for a higher number of concurrent user logins when connecting to an LDAP server.
