@@ -4,9 +4,11 @@
     * analytics-model-building
     * analytics-model-management
     * decisioning
-    * program-execution
+    * scoring-execution
 * Updated platform-common configuration:
     * Removed memory limit setting for sas-authorization (default values have changed)
+* Updated compute-common configuration:
+    * Removed memory and cpu limit settings for sas-launcher (default values have changed)
 
 ## v1.2.0 (2024.08 - 2024.12)
 * Refactored tunings for the new sas-file-store deployment

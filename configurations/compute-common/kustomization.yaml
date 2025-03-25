@@ -1,7 +1,6 @@
 resources:
   # Compute/Launcher tuning
   - sas-compute/resource-limits.yaml
-  - sas-launcher/resource-limits.yaml
   - sas-launcher/launcher-super-user-process-limit.yaml
   - sas-launcher/launcher-user-process-limit.yaml
 
@@ -17,7 +16,6 @@ resources:
 transformers:
   # Compute/Launcher tuning
   - sas-compute/resource-limits.yaml
-  - sas-launcher/resource-limits.yaml
   - sas-launcher/launcher-super-user-process-limit.yaml
   - sas-launcher/launcher-user-process-limit.yaml
 
