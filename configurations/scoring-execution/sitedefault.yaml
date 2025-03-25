@@ -1,0 +1,3 @@
+
+# JVM Tuning
+config/microanalyticScore/jvm/java_option_xmx: -Xmx2g
