@@ -17,6 +17,6 @@ Kubernetes pods/deployments. Because of this, only the settings defined in the [
 
 | Pod Name                           | CPU Limits     | Memory Limits  | Java Heap              | Other                        |
 |------------------------------------|----------------|----------------|------------------------|------------------------------|
-| sas-business-rules                 |                |                | MaxRAMPercentage (75%) |                              |
 | sas-decisions                      |                |                | MaxRAMPercentage (75%) |                              |
+| sas-decisions-framework            |                |                | MaxRAMPercentage (75%) |                              |
 | sas-treatment-definitions          |                |                | MaxRAMPercentage (75%) |                              |
