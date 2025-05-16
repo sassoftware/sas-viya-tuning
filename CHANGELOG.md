@@ -1,5 +1,9 @@
 
-## v1.3.0 (2025.01)
+## v1.3.1 (2025.01 - 2025.03)
+* Fixed the pod requests for Crunchy
+* Added JVM tuning for sas-credentials in platform-common configuration
+
+## v1.3.0 (2025.01 - 2025.02)
 * Introduced new tunings for the following scenarios:
     * analytics-model-building
     * analytics-model-management

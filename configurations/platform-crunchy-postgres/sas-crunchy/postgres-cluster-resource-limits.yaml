@@ -14,6 +14,9 @@ patch: |-
    - op: replace
      path: /spec/instances/0/resources
      value:
+       requests:
+         cpu: 150m
+         memory: 2Gi
        limits:
          cpu: 12
          memory: 14Gi
@@ -21,6 +24,9 @@ patch: |-
    - op: replace
      path: /spec/backups/pgbackrest/repoHost/resources
      value:
+       requests:
+         cpu: 100m
+         memory: 256Mi
        limits:
          cpu: 12
          memory: 14Gi
