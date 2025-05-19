@@ -11,7 +11,7 @@ metadata:
   name: sas-launcher-user-process-limit
 patch: |-
   - op: replace
-    path: /spec/template/spec/containers/0/env/1
+    path: /spec/template/spec/containers/0/env/2
     value:
       name: SAS_LAUNCHER_USER_PROCESS_LIMIT
       value: "50"

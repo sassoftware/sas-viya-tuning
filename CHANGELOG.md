@@ -1,3 +1,5 @@
+## v1.4.0 (2025.04)
+* Updated sas-launcher environment variable settings. These changes are not compatible with earlier versions.
 
 ## v1.3.1 (2025.01 - 2025.03)
 * Fixed the pod requests for Crunchy
