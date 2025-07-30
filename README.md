@@ -64,13 +64,13 @@ available, the tunings in this project are verified against that release. If cha
 
 Follow these steps for integrating the tuning parameters into a new or existing Viya deployment.
 
-1. Clone the project using the appropriate Viya release:
+1. Clone the project using the appropriate Viya release and Git repository location:
 
-   `git clone --branch <viya-release> https://gitlab.sas.com/aat/sas-viya-tuning.git`
+   `git clone --branch <viya-release> <repository-location>/sas-viya-tuning.git`
 
    For example:
 
-   `git clone --branch 2024.07 https://gitlab.sas.com/aat/sas-viya-tuning.git`
+   `git clone --branch 2024.07 <repository-location>/sas-viya-tuning.git`
 
    Not specifying the branch/tag name during the clone operation will fetch the most recent version of the repo. If you have previously cloned this project from a previous release, you can switch to a newer release using the following commands:
 
