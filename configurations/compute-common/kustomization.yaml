@@ -13,6 +13,9 @@ resources:
 
   # - kube-proxy/node-kubelet-updater.yaml
 
+  # Workload Orchestrator tuning
+  - sas-workload-orchestrator/resource-limits.yaml
+
 transformers:
   # Compute/Launcher tuning
   - sas-compute/resource-limits.yaml
@@ -25,3 +28,6 @@ transformers:
   # SAS Studio tuning
   - sas-studio/resource-limits.yaml
   - sas-studio-app/resource-limits.yaml
+
+  # Workload Orchestrator tuning
+  - sas-workload-orchestrator/resource-limits.yaml

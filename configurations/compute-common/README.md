@@ -23,5 +23,5 @@ Add the following line to the `resources` section of the main sas-viya-tuning [k
 | sas-job-execution         | 2000m          | 1500Mi         | MaxRAMPercentage (75%) |                              |
 | sas-launcher              |                |                | MaxRAMPercentage (75%) |                              |
 | sas-studio                | 2000m          | 2Gi            |                        |                              |  
-| sas-studio-app            | 4000m          | 4Gi            | MaxRAMPercentage (75%) |                              |
+| sas-studio-app            | 1000m          | 1Gi            |  |                              |
 | sas-workload-orchestrator | 4000m          |                |                        |                              |  
