@@ -1,11 +1,11 @@
 resources:
   # Model Management Services tuning
-  - sas-model-management/resource-limits.yaml
+  - sas-model-manager/resource-limits.yaml
   - sas-model-publish/resource-limits.yaml
   - sas-score-definitions/resource-limits.yaml
 
 transformers:
   # Model Management Services tuning
-  - sas-model-management/resource-limits.yaml
+  - sas-model-manager/resource-limits.yaml
   - sas-model-publish/resource-limits.yaml
   - sas-score-definitions/resource-limits.yaml
