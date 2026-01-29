@@ -6,7 +6,6 @@ This scenario covers many of the common tuning parameters applicable to deployme
   * sas-compute
   * sas-job-execution
   * sas-launcher
-  * sas-workload-orchestrator
 
 ## Usage Notes
 
@@ -20,8 +19,7 @@ Add the following line to the `resources` section of the main sas-viya-tuning [k
 | Pod Name                  | CPU Limits     | Memory Limits  | Java Heap              | Other                        |
 |---------------------------|----------------|----------------|------------------------|------------------------------|
 | sas-compute               | 4000m          | 2Gi            |                        |                              |
-| sas-job-execution         | 2000m          | 1500Mi         | MaxRAMPercentage (75%) |                              |
+| sas-job-execution         |                | 1500Mi         | MaxRAMPercentage (75%) |                              |
 | sas-launcher              |                |                | MaxRAMPercentage (75%) |                              |
 | sas-studio                | 2000m          | 2Gi            |                        |                              |  
 | sas-studio-app            | 1000m          | 1Gi            |  |                              |
-| sas-workload-orchestrator | 4000m          |                |                        |                              |  

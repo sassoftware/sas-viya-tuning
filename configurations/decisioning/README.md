@@ -3,8 +3,7 @@
 This scenario covers tuning parameters applicable to deployments with a high volume of concurrent sessions building and managing decisions and related resources, typically from within SAS Decision Manager. The set of parameters includes:
 
 * Memory and CPU Limit Tuning - update JVM settings for several pods, including:
-  * sas-business-rules
-  * sas-decisions
+  * sas-decisions-framework
   * sas-treatment-definitions
 
 ## Usage Notes
@@ -17,6 +16,5 @@ Kubernetes pods/deployments. Because of this, only the settings defined in the [
 
 | Pod Name                           | CPU Limits     | Memory Limits  | Java Heap              | Other                        |
 |------------------------------------|----------------|----------------|------------------------|------------------------------|
-| sas-decisions                      |                |                | MaxRAMPercentage (75%) |                              |
 | sas-decisions-framework            |                |                | MaxRAMPercentage (75%) |                              |
 | sas-treatment-definitions          |                |                | MaxRAMPercentage (75%) |                              |

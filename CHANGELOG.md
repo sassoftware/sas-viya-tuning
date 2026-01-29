@@ -1,4 +1,4 @@
-## v1.5.2 (2025.09)
+## v1.6.0 (2025.09)
 * Removed the following platform-common configurations:
     * sas-arke (default values have changed)
     * sas-files (default values have changed)
@@ -13,6 +13,19 @@
     * Removed cpu limit setting for sas-scheduler (default value has changed)
 * Updated decisioning sitedefault configuration:
     * Removed decisions JVM tuning (decisions pod merged into decisionsFramework)
+
+## v1.5.1 (2025.06 - 2025.08)
+* Fixed kustomization.yaml reference to renamed sas-model-manager directory
+
+## v1.5.0 (2025.06)
+* Renamed sas-model-management to sas-model-manager (Model Management service was merged into new MCR service)
+* Added sas-workload-orchestrator resource limits to compute-common configuration
+* Updated sas-studio-app resource limits:
+    * Reduced CPU limit from 4000m to 1000m
+    * Reduced memory limit from 4Gi to 1Gi
+    * Removed JVM tuning (SAS Studio is now a Go application)
+* Updated documentation:
+    * Replaced hardcoded GitLab URL with placeholder for repository location
 
 ## v1.4.0 (2025.04)
 * Updated sas-launcher environment variable settings. These changes are not compatible with earlier versions.
