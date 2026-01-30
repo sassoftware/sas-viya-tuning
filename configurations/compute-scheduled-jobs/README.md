@@ -17,4 +17,4 @@ Add the following line to the `resources` section of the main sas-viya-tuning [k
 
 | Pod Name           | CPU Limits     | Memory Limits  | Java Heap              | Other                        |
 |--------------------|----------------|----------------|------------------------|------------------------------|
-| sas-scheduler      | 2000m          | 1500Mi         | MaxRAMPercentage (75%) |                              |
+| sas-scheduler      |                | 1500Mi         | MaxRAMPercentage (75%) |                              |
