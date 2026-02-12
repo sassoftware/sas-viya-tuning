@@ -1,0 +1,45 @@
+---
+apiVersion: builtin
+kind: PatchTransformer
+metadata:
+  name: update-studio-hpa-replicas
+patch: |-
+  - op: replace
+    path: /spec/maxReplicas
+    value: 5
+  
+  # Modify the default CPU utilization metric
+  - op: replace
+    path: /spec/metrics/0/resource/target/averageUtilization
+    value: 750
+
+  # Add a memory utilization metric
+  - op: add
+    path: /spec/metrics/-
+    value:
+      type: Resource
+      resource:
+        name: memory
+        target:
+          averageUtilization: 3000
+          type: Utilization
+
+  # Add scaling behavior
+  - op: add
+    path: /spec/behavior
+    value:
+      scaleDown:
+        policies:
+          - type: Pods
+            value: 1
+            periodSeconds: 60
+      scaleUp:
+        policies:
+          - type: Pods
+            value: 1
+            periodSeconds: 60
+target:
+  kind: HorizontalPodAutoscaler
+  version: v2
+  apps: autoscaling
+  name: sas-studio

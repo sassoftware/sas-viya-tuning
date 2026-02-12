@@ -1,0 +1,21 @@
+resources:
+  - sas-authorization-hpa-settings.yaml
+  - sas-compute-hpa-settings.yaml
+  - sas-files-hpa-settings.yaml
+  - sas-identities-hpa-settings.yaml
+  - sas-job-execution-hpa-settings.yaml
+  - sas-launcher-hpa-settings.yaml
+  - sas-logon-app-hpa-settings.yaml
+  - sas-scheduler-hpa-settings.yaml
+  - sas-studio-hpa-settings.yaml
+
+transformers:
+  - sas-authorization-hpa-settings.yaml
+  - sas-compute-hpa-settings.yaml
+  - sas-files-hpa-settings.yaml
+  - sas-identities-hpa-settings.yaml
+  - sas-job-execution-hpa-settings.yaml
+  - sas-launcher-hpa-settings.yaml
+  - sas-logon-app-hpa-settings.yaml
+  - sas-scheduler-hpa-settings.yaml
+  - sas-studio-hpa-settings.yaml
