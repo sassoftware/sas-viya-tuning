@@ -1,5 +1,19 @@
-# Guidelines for contributing to this project
+# Contributing
+Maintainers are accepting patches and contributions to this project.
+Please note the following contribution guidelines, and see the [SAS Open Source Contributor Handbook](https://sassoftware.github.io/contributor-handbook.html) for additional guidance.
 
-Contributions to this project are welcome if additional tuning parameters that may be applicable to others should be documented.  All contributions 
-are handled by submitting a merge request to the repository.  This is done to ensure the changes are properly 
-reviewed before being accepted into the product.
+## Contributor Agreement
+Contributors to this project must comply with the [Contributor Agreement](ContributorAgreement.txt).
+This agreement permits the project maintainers to use and redistribute your contributions as part of the project.
+You (or your employer) retain the copyright to your contribution.
+
+## Code Reviews
+All submissions, including submissions by project members, require review.
+Maintainers use GitHub pull requests are used for this purpose.
+Consult [GitHub Help](https://help.github.com/articles/about-pull-requests/) for more information about using pull requests.
+
+## Update Documentation
+<!-- Remove this section if not using the documentation website template. -->
+Project documentation is stored in the `website` directory.
+This project welcomes pull requests suggesting updates to this documentation.
+See the documentation [README](./website/README.md) for details.
