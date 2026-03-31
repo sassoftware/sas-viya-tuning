@@ -1,4 +1,3 @@
-
 # sas-viya-tuning
 
 The sas-viya-tuning repo contains a set of tuning parameters designed to improve overall performance for large scale Viya deployments. 
