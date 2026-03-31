@@ -11,9 +11,3 @@ You (or your employer) retain the copyright to your contribution.
 All submissions, including submissions by project members, require review.
 Maintainers use GitHub pull requests are used for this purpose.
 Consult [GitHub Help](https://help.github.com/articles/about-pull-requests/) for more information about using pull requests.
-
-## Update Documentation
-<!-- Remove this section if not using the documentation website template. -->
-Project documentation is stored in the `website` directory.
-This project welcomes pull requests suggesting updates to this documentation.
-See the documentation [README](./website/README.md) for details.
