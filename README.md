@@ -36,11 +36,8 @@ different scenario. In these situations, it is important to remember when applyi
 | --------------------------|---------------------------------------------|
 | [analytics-model-building](./configurations/analytics-model-building/README.md) | Tunings specific to SAS Model Studio and building analytical models.
 | [analytics-model-management](./configurations/analytics-model-management/README.md) | Tunings specific to SAS Model Manager and administering and publishing analytical models.
-| [compute-common](./configurations/compute-common/README.md) | Tunings specific to the SAS Compute, SAS Launcher services, and SAS Workload Orchestrator, when a high number of concurrent Compute sessions are required.
-| [compute-scheduled-jobs](./configurations/compute-scheduled-jobs/README.md) | Tunings specific situations where there is a large number of scheduled jobs running within the deployment.
-| [decisioning](./configurations/decisioning/README.md) | Tunings specific to SAS Decision Manager.
+| [compute-common](./configurations/compute-common/README.md) | Tunings specific to SAS Launcher and SAS Studio services when a high number of concurrent compute sessions are required.
 | [scoring-execution](./configurations/scoring-execution/README.md) | Tunings specific to the SAS MicroAnalytic Service, when a high volume of programs are executed.
-| [reporting-visualization](./configurations/reporting-visualization/README.md) | Tunings specific to SAS Visual Analytics, when a high volume of users are accessing the web application, viewing and/or editing reports, etc.
 
 
 ## Project Release Information
@@ -54,6 +51,7 @@ available, the tunings in this project are verified against that release. If cha
 
 | Version          | Compatible Viya Release(s)                 |
 | -----------------|--------------------------------------------|
+| 1.7.0            | 2025.12 -                                  |
 | 1.6.0            | 2025.09 - 2025.11                          |
 | 1.5.1            | 2025.06 - 2025.08                          |
 | 1.4.0            | 2025.04 - 2025.05                          |
@@ -97,11 +95,13 @@ Follow these steps for integrating the tuning parameters into a new or existing 
 4. Review the individual `README.md` files for each scenario for information on what specific tunings are covered. Keep in mind that further customizations may be required for each scenario - either by adjusting the default values or adding new configurations - depending on your workload needs. For each applicable scenario, add the appropriate reference to the `sas-viya-tuning/configurations/kustomization.yaml` file as needed. Note, the `platform-common` scenario is applied by default and is recommended for all environments.
 For example:
 
-    ```bash
-    resources:
-      - platform-common
+    ```bash 
+   resources:
+      - analytics-model-building
+      - analytics-model-management
       - compute-common
-      - compute-scheduled-jobs
+      - platform-common
+      - platform-crunchy-postgres
     ```
 
 5. Once the transformers are in place, follow the steps below to complete the setup, depending on if your'e dealing with a new Viya deployment, or one that already exists and needs to be updated.

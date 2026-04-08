@@ -1,5 +1,0 @@
-resources:
-  - sas-microanalytic-score/resource-limits.yaml
-
-transformers:
-  - sas-microanalytic-score/resource-limits.yaml
