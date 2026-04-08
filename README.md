@@ -51,7 +51,7 @@ available, the tunings in this project are verified against that release. If cha
 
 | Version          | Compatible Viya Release(s)                 |
 | -----------------|--------------------------------------------|
-| 1.7.0            | 2025.12 -                                  |
+| 1.7.0            | 2025.12 - 2026.01                          |
 | 1.6.0            | 2025.09 - 2025.11                          |
 | 1.5.1            | 2025.06 - 2025.08                          |
 | 1.4.0            | 2025.04 - 2025.05                          |
