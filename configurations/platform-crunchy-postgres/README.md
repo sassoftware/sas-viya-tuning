@@ -6,6 +6,6 @@ This scenario includes additional tunings for deployments configured with an int
 
 Add the following line to the `resources` section of the main sas-viya-tuning [kustomization.yaml](../kustomization.yaml) file:
 
-    ```bash
+    resources:
       - platform-crunchy-postgres
     ```

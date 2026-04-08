@@ -21,6 +21,5 @@ Add the following line to the `resources` section of the main sas-viya-tuning [k
 | Pod Name           | CPU Limits     | Memory Limits  | Java Heap              | Other                        |
 |--------------------|----------------|----------------|------------------------|------------------------------|
 | All Services       |                |                |                        | JDBC Connection Pool (large) |
-| sas-file-store     | 3000m          | 2Gi            |                        |                              |
-| sas-identities     |                |                | MaxRAMPercentage (75%) | LDAP Connection Pool (30)    |
-| sas-logon-app      |                | 2Gi            | MaxRAMPercentage (75%) |                              |
+| sas-file-store     | 3000m          |                |                        |                              |
+| sas-logon-app      |                |                | Xms (1024m)            |                              |

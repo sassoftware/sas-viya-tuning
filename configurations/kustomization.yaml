@@ -1,2 +1,6 @@
 resources:
+  - analytics-model-building
+  - analytics-model-management
+  - compute-common
   - platform-common
+  - platform-crunchy-postgres

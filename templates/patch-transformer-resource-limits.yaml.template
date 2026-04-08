@@ -2,16 +2,17 @@
 apiVersion: builtin
 kind: PatchTransformer
 metadata:
-  name: sas-analytics-resources-limits-tuning
+  name: {{ SERVICE_NAME }}-resource-limits-tuning
 patch: |-
+  # Remove the CPU or memory patch if you only need to change one.
   - op: replace
     path: /spec/template/spec/containers/0/resources/limits/cpu
-    value: 3000m
+    value: {{ CPU_LIMIT }}
   - op: replace
     path: /spec/template/spec/containers/0/resources/limits/memory
-    value: 1Gi
+    value: {{ MEMORY_LIMIT }}
 target:
   group: apps
   kind: Deployment
-  name: sas-analytics-resources
+  name: {{ SERVICE_NAME }}
   version: v1
