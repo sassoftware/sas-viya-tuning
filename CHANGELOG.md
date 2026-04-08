@@ -1,4 +1,4 @@
-## v1.7.0 (2025.12)
+## v1.7.0 (2025.12-2026.01)
 * Removed scenarios with no active tuning settings:
   * compute-scheduled-jobs
   * decisioning
