@@ -1,7 +1,0 @@
-resources:
-  # Crunchy Postgres tuning
-  - sas-crunchy/postgres-cluster-resource-limits.yaml
-
-transformers:
-   # Crunchy Postgres tuning
-  - sas-crunchy/postgres-cluster-resource-limits.yaml
