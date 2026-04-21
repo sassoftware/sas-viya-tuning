@@ -1,3 +1,7 @@
+## v1.8.0 (2026.02)
+* Removed the platform-crunchy-postgres configuration
+* Removed the JVM tuning configurations for scoring-execution
+
 ## v1.7.0 (2025.12-2026.01)
 * Removed scenarios with no active tuning settings:
   * compute-scheduled-jobs

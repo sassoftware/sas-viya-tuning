@@ -117,7 +117,6 @@ These values are guidelines (rule-of-thumb starting points), not strict recommen
      - analytics-model-management
      - compute-common
      - platform-common
-     - platform-crunchy-postgres
      - acme-tuning          # Add your custom tuning folder here
    ```
 

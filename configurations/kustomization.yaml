@@ -3,4 +3,4 @@ resources:
   - analytics-model-management
   - compute-common
   - platform-common
-  - platform-crunchy-postgres
+  
