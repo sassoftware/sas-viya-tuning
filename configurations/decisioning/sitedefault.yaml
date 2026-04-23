@@ -1,4 +1,0 @@
-
-# JVM Tuning
-config/decisionsFramework/jvm/java_option_xmx: -XX:MaxRAMPercentage=75
-config/treatmentDefinitions/jvm/java_option_xmx: -XX:MaxRAMPercentage=75
