@@ -49,7 +49,7 @@ available, the tunings in this project are verified against that release. If cha
 
 | Version          | Compatible Viya Release(s)                 |
 | -----------------|--------------------------------------------|
-| 1.8.0            | 2026.02 - 2026.03                          |
+| 1.8.0            | 2026.02 - 2026.04                          |
 | 1.7.0            | 2025.12 - 2026.01                          |
 | 1.6.0            | 2025.09 - 2025.11                          |
 | 1.5.1            | 2025.06 - 2025.08                          |
