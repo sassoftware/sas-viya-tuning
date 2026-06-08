@@ -140,4 +140,4 @@ because the sitedefault file is only processed during the initial installation o
 We welcome your contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details about submitting contributions to this project.
 
 ## License
-This project is licensed under the [Apache 2.0 License](LICENSE).
+This project (including historical versions) is licensed under the [Apache 2.0 License](LICENSE).
