@@ -1,3 +1,7 @@
+## v1.9.0 (2026.05)
+* Added sas-audit resource limits to platform-common configuration
+* Added sas-job-execution-app resource limits to compute-common configuration
+
 ## v1.8.0 (2026.02)
 * Removed the platform-crunchy-postgres configuration
 * Removed the JVM tuning configurations for scoring-execution

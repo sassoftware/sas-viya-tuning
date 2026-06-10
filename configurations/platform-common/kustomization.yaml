@@ -1,7 +1,9 @@
 resources:
   # Platform resource limits tuning
   - sas-file-store/resource-limits.yaml
+  - sas-audit/resource-limits.yaml
 
 transformers:
   # Platform resource limits tuning
   - sas-file-store/resource-limits.yaml
+  - sas-audit/resource-limits.yaml
