@@ -1,4 +1,3 @@
-
 # sas-viya-tuning
 
 The sas-viya-tuning repo contains a set of tuning parameters designed to improve overall performance for large scale Viya deployments. 
@@ -137,3 +136,9 @@ because the sitedefault file is only processed during the initial installation o
    * Note, some properties require a restart of the service to take effect. This restart will occur in the following step when the services are re-deployed.
 
 3. Follow the instructions in the [Modifying Existing Customizations in a Deployment](https://go.documentation.sas.com/doc/en/sasadmincdc/v_045/dplyml0phy0dkr/n1f2q6pp0gjheqn1jl204vptrubs.htm) section of the SAS Viya Platform Administration guide to update the software.
+
+## Contributing
+We welcome your contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details about submitting contributions to this project.
+
+## License
+This project (including historical versions) is licensed under the [Apache 2.0 License](LICENSE).
